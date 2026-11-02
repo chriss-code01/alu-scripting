@@ -18,4 +18,4 @@ def top_ten(subreddit):
                      allow_redirects=False)
     except Exception:
         pass
-    print("OK")
+    print("OK", end="")
