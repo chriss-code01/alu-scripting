@@ -1,9 +1,14 @@
 #!/usr/bin/python3
-
+"""Module that recursively collects the titles of all hot posts."""
 import requests
 
-def recurse(subreddit, hot_list=None, after=None):
 
+def recurse(subreddit, hot_list=None, after=None):
+    """Return a list of titles of all hot posts of a subreddit.
+
+    Uses the 'after' pagination token and calls itself for each page.
+    Returns None if the subreddit is invalid or has no results.
+    """
     if hot_list is None:
         hot_list = []
     url = "https://www.reddit.com/r/{}/hot.json".format(subreddit)
