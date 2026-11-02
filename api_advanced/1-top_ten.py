@@ -1,4 +1,3 @@
-
 #!/usr/bin/python3
 """Module that prints the titles of the first 10 hot posts of a subreddit."""
 
@@ -31,4 +30,3 @@ def top_ten(subreddit):
 
     except requests.RequestException:
         return
-
